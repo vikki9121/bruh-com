@@ -1,0 +1,52 @@
+/* ProductInfo.css */
+
+.fade-down {
+    animation: fadeDownAnimation 1s ease-in-out;
+  }
+  
+  @keyframes fadeDownAnimation {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .spinner {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin: 250px auto;
+    animation: spin 1s linear infinite;
+  }
+  
+  .spinner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+  }
+  
+  .spinner .inner-spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-top: 4px solid #1a1a1a;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
